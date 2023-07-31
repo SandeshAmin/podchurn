@@ -12,6 +12,7 @@ spec:
     spec:
       containers:
         - name: churn-app
-          image: sandeshkv92/highpodchurn:1.0
+          image: sandeshkv92/highpodchurn:linux_amd64
+          imagePullPolicy: Always
       restartPolicy: Never
 
