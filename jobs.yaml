@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pod-churn-job
+spec:
+  completions: 500
+  parallelism: 5
+  template:
+    metadata:
+      labels:
+        app: pod-churn-job
+    spec:
+      containers:
+        - name: churn-app
+          image: sandeshkv92/highpodchurn:1.0
+      restartPolicy: Never
+
